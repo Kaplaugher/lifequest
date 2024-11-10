@@ -1,23 +1,56 @@
 <script lang="ts">
-	import { useQuery } from 'convex-svelte';
-	// Add dashboard data fetching logic
+	import {
+		Card,
+		CardContent,
+		CardDescription,
+		CardHeader,
+		CardTitle
+	} from '$lib/components/ui/card';
+	import { Progress } from '$lib/components/ui/progress';
+	import { Trophy, Target, Star } from 'lucide-svelte';
 </script>
 
-<div class="space-y-6">
-	<h1 class="text-3xl font-bold text-gray-900">Your Quest Journey</h1>
+<div class="container mx-auto space-y-6 p-6">
+	<h1 class="text-3xl font-bold">Welcome back, Adventurer!</h1>
 
-	<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-		<div class="rounded-lg bg-white p-6 shadow-sm">
-			<h3 class="mb-2 text-lg font-semibold">Active Quests</h3>
-			<p class="text-3xl font-bold text-indigo-600">3</p>
-		</div>
-		<div class="rounded-lg bg-white p-6 shadow-sm">
-			<h3 class="mb-2 text-lg font-semibold">Completed Quests</h3>
-			<p class="text-3xl font-bold text-indigo-600">12</p>
-		</div>
-		<div class="rounded-lg bg-white p-6 shadow-sm">
-			<h3 class="mb-2 text-lg font-semibold">Achievement Points</h3>
-			<p class="text-3xl font-bold text-indigo-600">1,250</p>
-		</div>
+	<div class="grid gap-4 md:grid-cols-3">
+		<Card>
+			<CardHeader>
+				<CardTitle class="flex items-center gap-2">
+					<Trophy class="h-5 w-5" />
+					Level 5
+				</CardTitle>
+				<CardDescription>Experience: 2340/3000</CardDescription>
+			</CardHeader>
+			<CardContent>
+				<Progress value={78} class="mt-2" />
+			</CardContent>
+		</Card>
+
+		<Card>
+			<CardHeader>
+				<CardTitle class="flex items-center gap-2">
+					<Target class="h-5 w-5" />
+					Active Quests
+				</CardTitle>
+				<CardDescription>Currently on 3 quests</CardDescription>
+			</CardHeader>
+			<CardContent>
+				<div class="text-2xl font-bold">3/5</div>
+			</CardContent>
+		</Card>
+
+		<Card>
+			<CardHeader>
+				<CardTitle class="flex items-center gap-2">
+					<Star class="h-5 w-5" />
+					Completed
+				</CardTitle>
+				<CardDescription>Total quests completed</CardDescription>
+			</CardHeader>
+			<CardContent>
+				<div class="text-2xl font-bold">27</div>
+			</CardContent>
+		</Card>
 	</div>
 </div>

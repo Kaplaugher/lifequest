@@ -1,33 +1,33 @@
 <script lang="ts">
-	import { Calendar, House, Inbox, Search, Settings } from 'lucide-svelte';
+	import { House, LogOut, Settings, Star, User } from 'lucide-svelte';
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
 
 	// Menu items.
 	const items = [
 		{
-			title: 'Home',
-			url: '#',
+			title: 'Dashboard',
+			url: '/dashboard',
 			icon: House
 		},
 		{
-			title: 'Inbox',
-			url: '#',
-			icon: Inbox
+			title: 'Quests',
+			url: '/dashboard/quests',
+			icon: Star
 		},
 		{
-			title: 'Calendar',
-			url: '#',
-			icon: Calendar
-		},
-		{
-			title: 'Search',
-			url: '#',
-			icon: Search
+			title: 'Profile',
+			url: '/dashboard/profile',
+			icon: User
 		},
 		{
 			title: 'Settings',
-			url: '#',
+			url: '/dashboard/settings',
 			icon: Settings
+		},
+		{
+			title: 'Logout',
+			url: '/api/auth/logout',
+			icon: LogOut
 		}
 	];
 </script>

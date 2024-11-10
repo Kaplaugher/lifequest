@@ -10,9 +10,11 @@
 					<a href="/" class="text-2xl font-bold text-indigo-600">LifeQuest</a>
 				</div>
 				<div class="flex space-x-4">
-					<a href="/login" class="rounded-md px-3 py-2 text-gray-600 hover:text-gray-900">Login</a>
+					<a href="/api/auth/login" class="rounded-md px-3 py-2 text-gray-600 hover:text-gray-900"
+						>Login</a
+					>
 					<a
-						href="/signup"
+						href="/api/auth/register"
 						class="rounded-md bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700">Sign Up</a
 					>
 				</div>
